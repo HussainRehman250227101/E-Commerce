@@ -1,0 +1,12 @@
+{% block subject %}
+Hi its the subject
+{% endblock %}
+
+{% block plain %}
+Hi its the plain
+{% endblock %}
+
+{% block html %}
+<p>Hi its the html</p>
+{% endblock %}
+
