@@ -100,22 +100,22 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 #     }
 # }
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get('DB_NAME'),
-            'USER': os.environ.get('DB_USER'),
-            'PASSWORD': os.environ.get('DB_PASSWORD'),
-            'HOST': os.environ.get('DB_HOST', 'localhost'),
-            'PORT': os.environ.get('DB_PORT', '3306'),
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.config(
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST', 'localhost'),
+#         'PORT': os.environ.get('DB_PORT', '3306'),
+#     }
+# }
+
+DATABASES = {
+    'default': dj_database_url.config(
             default=os.environ.get('DATABASE_URL')
-        )
+    )
     }
 
 
