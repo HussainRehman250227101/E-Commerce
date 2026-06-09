@@ -64,7 +64,7 @@ class CartViewSet(CreateModelMixin,RetrieveModelMixin,DestroyModelMixin,GenericV
 
 # CART ITEM VIEW SET
 class CartItemViewSet(ModelViewSet):
-    http_method_names = ['get','post','patch','delete']
+    http_method_names = ['get','post','patch','delete','head','options']
 
     def get_queryset(self):
         return CartItem.objects.filter(cart__id=self.kwargs['cart_pk']) 
@@ -79,10 +79,14 @@ class CartItemViewSet(ModelViewSet):
     
 class CustomerViewSet(ModelViewSet):
     queryset = Customer.objects.all()
-    permission_classes = [IsAdminUser]
+
+    def get_permissions(self):
+        if  self.action in ['create', 'me']:
+            return [IsAuthenticated()]
+        return [IsAdminUser()]
 
     def get_serializer_class(self):
-        if self.action == 'me':
+        if self.action in ['me', 'create'] :
             return CustomerSerializer
         return AdminCustomerSerializer
 
@@ -90,15 +94,18 @@ class CustomerViewSet(ModelViewSet):
     def history(self,request,pk):
         return Response('ok')
 
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
     @action(detail=False,methods=['GET','PUT'],permission_classes=[IsAuthenticated])
     def me(self,request):
         customer = get_object_or_404(Customer,user=request.user)
 
         if request.method == 'GET':
-            serializer = self.get_serializer(customer)
+            serializer = CustomerSerializer(customer)
             return Response(serializer.data)
         elif request.method == 'PUT':
-            serializer  = self.get_serializer(customer,data = request.data)
+            serializer  = CustomerSerializer(customer,data = request.data)
             serializer.is_valid(raise_exception = True)
             serializer.save()
         return Response(serializer.data) 

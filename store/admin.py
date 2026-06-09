@@ -3,7 +3,10 @@ from django.db.models import Count
 from django.urls import reverse
 from django.utils.html import format_html
 from urllib.parse import urlencode
-from .models import Product,Collection,Customer,Order,OrderItem, ProductImage 
+from .models import Promotion,Product,Collection,Customer,Order,OrderItem, ProductImage 
+
+
+admin.site.register(Promotion)
 
 class Order_Item(admin.TabularInline):
     model = OrderItem 
@@ -129,6 +132,6 @@ class CollectionAdmin(admin.ModelAdmin):
         return format_html('<a href="{}">{}</a>',url,collection.products_count)
     
     def get_queryset(self, request):
-        return super().get_queryset(request).annotate(products_count = Count('product'))
+        return super().get_queryset(request).annotate(products_count = Count('products'))
 
 

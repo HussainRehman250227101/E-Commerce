@@ -1,5 +1,6 @@
 from decimal import Decimal,ROUND_HALF_UP
 from operator import truediv
+from typing import Required
 from rest_framework import serializers
 from .models import *
 
@@ -56,9 +57,10 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 # SIMPLE PRODUCT SERIALIZER
 class SimpleProductSerializer(serializers.ModelSerializer):
+    images = ProductImageSerializer(many=True,read_only=True)
     class Meta:
         model = Product
-        fields = ['id','title','unit_price']
+        fields = ['id','title','unit_price','images']
 
 
 # SIMPLE CART ITEM SERIALIZER
@@ -126,10 +128,10 @@ class AdminCustomerSerializer(serializers.ModelSerializer):
 
 # CUSTOMER SERIALIZER
 class CustomerSerializer(serializers.ModelSerializer):
-    membership = serializers.CharField(max_length = 1,read_only=True)
+    membership = serializers.CharField(max_length = 1,read_only= True)
     class Meta:
         model = Customer
-        fields = ['phone','birth_date','membership']
+        fields = ['phone','birth_date','membership','profile_image']
 
 
 # CREATE ORDER SERIALIZER

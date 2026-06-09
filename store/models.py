@@ -17,7 +17,7 @@ class Promotion(models.Model):
 # COLLECTION MODEL
 class Collection(models.Model):
     title = models.CharField(max_length=255) 
-    featured_product = models.ForeignKey('Product',on_delete=models.SET_NULL,null=True, related_name = 'product_collection')
+    featured_product = models.ForeignKey('Product',on_delete=models.SET_NULL,null=True, related_name = 'product_collection',blank=True)
 
 
     class Meta:
@@ -66,6 +66,7 @@ class Customer(models.Model):
     birth_date = models.DateField(null=True)
     membership = models.CharField(max_length=1,choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    profile_image = models.ImageField(upload_to='images',null=True)
 
     class Meta:
         ordering = ['user__first_name','user__last_name']
@@ -93,7 +94,7 @@ class Order(models.Model):
     customer = models.ForeignKey(Customer,on_delete=models.PROTECT)
 
     def __str__(self):
-        return str(self.customer.first_name + ' ' + self.customer.last_name) 
+        return str(self.customer.user.first_name + ' ' + self.customer.user.last_name) 
 
 
 # ORDER ITEM MODEL
@@ -114,7 +115,7 @@ class Address(models.Model):
     customer = models.ForeignKey(Customer,on_delete=models.CASCADE,)
 
     def __str__(self):
-        return str(self.customer.first_name + ' ' + self.customer.last_name + f" '  '{self.street} ' ' {self.city} ")
+        return str(self.customer.user.first_name + ' ' + self.customer.user.last_name + f" '  '{self.street} ' ' {self.city} ")
 
 
 # CART MODEL
