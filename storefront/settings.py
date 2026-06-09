@@ -14,6 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
+    "api.hussaindev.tech",
     "e-commerce-production-5122.up.railway.app",
     "localhost",
     "127.0.0.1",
@@ -56,8 +57,9 @@ MIDDLEWARE = [
 CORS_ALLOW_HEADERS = list(default_headers) + [
     "authorization",
 ]
-CORS_ALLOW_ALL_ORIGINS =True
+
 CSRF_TRUSTED_ORIGINS = [
+    "https://api.hussaindev.tech",
     "https://e-commerce-production-5122.up.railway.app",
 ]
 
