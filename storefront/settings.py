@@ -3,8 +3,9 @@ from pathlib import Path
 from datetime import timedelta
 import dj_database_url
 from corsheaders.defaults import default_headers
+from dotenv import load_dotenv
 
-
+load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -99,11 +100,23 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
-}
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('DB_NAME'),
+            'USER': os.environ.get('DB_USER'),
+            'PASSWORD': os.environ.get('DB_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', '3306'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get('DATABASE_URL')
+        )
+    }
 
 
 AUTH_PASSWORD_VALIDATORS = [
