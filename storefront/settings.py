@@ -112,15 +112,15 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         # 'NAME': 'storefront',
-#         # 'HOST':'127.0.0.1',
-#         # 'USER':'root',
-#         # 'PASSWORD':''
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'storefront',
+        'HOST':'127.0.0.1',
+        'USER':'root',
+        'PASSWORD':'_7s5#jbRM24EAHUSSAIN'
+    }
+}
 
 
 # DATABASES = {
@@ -188,6 +188,9 @@ REST_FRAMEWORK = {
 STORAGES = {
     "default": {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 

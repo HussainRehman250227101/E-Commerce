@@ -38,7 +38,7 @@ class Product(models.Model):
     last_update = models.DateTimeField(auto_now=True) 
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT,related_name='products')
     rating = models.DecimalField( max_digits=2,decimal_places=1, validators=[MinValueValidator(0),MaxValueValidator(5)])
-    promotions = models.ManyToManyField(Promotion, null=True, blank=True)
+    promotions = models.ManyToManyField(Promotion, blank=True)
 
     class Meta:
         ordering = ['title','unit_price']
