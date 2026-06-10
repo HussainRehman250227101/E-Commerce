@@ -36,7 +36,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product 
-        fields = ['id','title','images','description','unit_price','price_with_tax','inventory','collection','promotions']
+        fields = ['id','title','images','description','unit_price','price_with_tax','rating','inventory','collection','promotions']
         read_only_fields = ['id','inventory','promotions']
 
     def get_price_with_tax(self,product):

@@ -58,9 +58,18 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
     "authorization",
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://www.hussaindev.tech",
+    "https://hussaindev.tech",
+    "http://localhost:5173",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
 CSRF_TRUSTED_ORIGINS = [
+    "https://www.hussaindev.tech",
+    "https://hussaindev.tech",
     "https://api.hussaindev.tech",
-    "https://e-commerce-production-5122.up.railway.app",
 ]
 
 INTERNAL_IPS = [
