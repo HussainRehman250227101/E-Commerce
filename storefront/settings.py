@@ -118,7 +118,7 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 #         'NAME': 'storefront',
 #         'HOST':'127.0.0.1',
 #         'USER':'root',
-#         'PASSWORD':''
+#         'PASSWORD':'_7s5#jbRM24EAHUSSAIN'
 #     }
 # }
 
@@ -138,7 +138,7 @@ DATABASES = {
     'default': dj_database_url.config(
             default=os.environ.get('DATABASE_URL')
     )
-    }
+}
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -196,7 +196,7 @@ STORAGES = {
 
 SIMPLE_JWT = {
    'AUTH_HEADER_TYPES': ('JWT',),
-   "ACCESS_TOKEN_LIFETIME": timedelta(days=3),
+   "ACCESS_TOKEN_LIFETIME": timedelta(days=10),
 }
 
 DJOSER = {

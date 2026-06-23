@@ -45,10 +45,17 @@ class ProductSerializer(serializers.ModelSerializer):
 
 # REVIEW SERIALIZER
 class ReviewSerializer(serializers.ModelSerializer):
+    name = serializers.SerializerMethodField()
+    image = serializers.ImageField(source='name.profile_image',read_only=True)
     class Meta:
         model = Review
-        fields = ['id','name','description','created_at'] 
+        fields = ['id','name','image','rating','description','created_at'] 
         read_only_fields = ['id','name','created_at']
+
+    def get_name(self, obj):
+        return obj.name.user.first_name+" "+obj.name.user.last_name
+    
+   
 
     def create(self, validated_data):
         product_id = self.context['product_id']

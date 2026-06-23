@@ -3,10 +3,16 @@ from django.db.models import Count
 from django.urls import reverse
 from django.utils.html import format_html
 from urllib.parse import urlencode
-from .models import Promotion,Product,Collection,Customer,Order,OrderItem, ProductImage 
+from .models import Promotion,Product,Collection,Customer,Order,OrderItem, ProductImage ,Review
 
 
 admin.site.register(Promotion)
+
+class Admin_Rview(admin.TabularInline):
+    model = Review
+    extra = 1
+    
+
 
 class Order_Item(admin.TabularInline):
     model = OrderItem 

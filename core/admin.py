@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.contenttypes.admin import GenericTabularInline
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from store.models import Product 
+from store.models import Product, Review 
 from tags.models import TaggedItem,Tag 
 from store.admin import ProductAdmin, ProductImageAdmin 
 from .models import User
@@ -20,6 +20,12 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
+class Admin_Rview(admin.TabularInline):
+    model = Review
+    extra = 1
+    
+
+
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
     search_fields = ['label']
@@ -33,7 +39,7 @@ class ProductTags(GenericTabularInline):
         return str(self.tag.label)
 
 class CustomProductAdmin(ProductAdmin):
-    inlines = [ProductTags,ProductImageAdmin]
+    inlines = [ProductTags,ProductImageAdmin,Admin_Rview]
      
 admin.site.unregister(Product)
 admin.site.register(Product,CustomProductAdmin)
