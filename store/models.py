@@ -17,7 +17,7 @@ class Promotion(models.Model):
 # COLLECTION MODEL
 class Collection(models.Model):
     title = models.CharField(max_length=255) 
-    featured_product = models.ForeignKey('Product',on_delete=models.SET_NULL,null=True, related_name = 'product_collection',blank=True)
+    featured_product = models.ForeignKey('Product',on_delete=models.SET_NULL,null=True, related_name = 'featured_product',blank=True)
 
 
     class Meta:

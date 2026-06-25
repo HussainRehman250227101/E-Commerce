@@ -33,14 +33,18 @@ class ProductSerializer(serializers.ModelSerializer):
     )
     price_with_tax = serializers.SerializerMethodField() 
     images = ProductImageSerializer(many=True,read_only=True)
+    featured_product = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Product 
-        fields = ['id','title','images','description','unit_price','price_with_tax','rating','inventory','collection','promotions']
+        fields = ['id','title','images','description','unit_price','price_with_tax','rating','inventory','featured_product','collection','promotions']
         read_only_fields = ['id','inventory','promotions']
 
     def get_price_with_tax(self,product):
         return (product.unit_price * Decimal("1.1")).quantize(Decimal("0.01"),rounding=ROUND_HALF_UP)
+    
+    def get_featured_product(self,product):
+        return Collection.objects.filter(featured_product_id=product.id).exists()
 
 
 # REVIEW SERIALIZER
@@ -65,18 +69,26 @@ class ReviewSerializer(serializers.ModelSerializer):
 # SIMPLE PRODUCT SERIALIZER
 class SimpleProductSerializer(serializers.ModelSerializer):
     images = ProductImageSerializer(many=True,read_only=True)
+    featured_product = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = Product
-        fields = ['id','title','unit_price','images']
+        fields = ['id','title','unit_price','rating','featured_product','images']
+        read_only_fields = ['rating']
+
+    def get_featured_product(sefl, product):
+        return Collection.objects.filter(featured_product_id = product.id).exists() 
 
 
 # SIMPLE CART ITEM SERIALIZER
 class SimpleCartItemSerializer(serializers.ModelSerializer):
-    product_id = serializers.IntegerField()
+    product_id = serializers.IntegerField(write_only=True)
+    product = serializers.SerializerMethodField(read_only=True)
+    total_price = serializers.SerializerMethodField(read_only=True)
+    
 
     class Meta:
         model = CartItem
-        fields = ['product_id','quantity']
+        fields = ['id','product','quantity','total_price','product_id']
 
     def create(self, validated_data):
         cart_id = self.context['cart_id']
@@ -97,6 +109,12 @@ class SimpleCartItemSerializer(serializers.ModelSerializer):
         if not Product.objects.filter(pk=value).exists():
             raise serializers.ValidationError('product does not exist') 
         return value
+    
+    def get_total_price(self,cartItem):
+        return cartItem.product.unit_price * Decimal(cartItem.quantity)
+    
+    def get_product(self,cartItem):
+        return SimpleProductSerializer(cartItem.product).data
 
 
 # CART ITEM SERIALIZER
