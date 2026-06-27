@@ -39,8 +39,7 @@ class ProductViewSet(ModelViewSet):
 
 # COLLECTION VIEW SET
 class CollectionViewSet(ModelViewSet):
-    queryset = Collection.objects.annotate(
-    products_count=Count("products")) 
+    queryset = Collection.objects.annotate(products_count=Count("products")) 
     serializer_class = CollectionSerializer 
     permission_classes = [IsAdminOrReadOnly]
 
