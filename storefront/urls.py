@@ -8,7 +8,6 @@ from store.views import Hellow
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hellow/', Hellow.as_view()),
     path('playground/', include('playground.urls')),
     path('store/', include('store.urls')),
     path('auth/', include('djoser.urls')),

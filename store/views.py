@@ -16,8 +16,7 @@ from .pagination import ProductPagnation
 from .filters import ProductFilter
 from .serializers import AdminCustomerSerializer, CartSerializer, CreateOrderSerializer, CustomerSerializer, OrderSerializer, ProductImageSerializer, ProductSerializer,CollectionSerializer,ReviewSerializer,CartItemSerializer, SimpleCartItemSerializer, UpdateOrderSerializer
 
-from django.db import connection
-import time
+
 
 # PRODUCT VIEW SET
 class ProductViewSet(ModelViewSet):
@@ -29,25 +28,6 @@ class ProductViewSet(ModelViewSet):
     search_fields = ['title','description']
     ordering_fields = ['unit_price']
     permission_classes = [IsAdminOrReadOnly]
-
-    def list(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-
-        t = time.perf_counter()
-        count = queryset.count()
-        print("COUNT:", time.perf_counter() - t)
-
-        t = time.perf_counter()
-        page = list(queryset[:8])
-        print("SLICE:", time.perf_counter() - t)
-
-        serializer = self.get_serializer(page, many=True)
-
-        t = time.perf_counter()
-        serializer.data
-        print("SERIALIZE:", time.perf_counter() - t)
-
-        return Response(serializer.data)
 
     def destroy(self, request, *args, **kwargs):
         product =  self.get_object() 
