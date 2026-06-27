@@ -33,7 +33,10 @@ class ProductSerializer(serializers.ModelSerializer):
     )
     price_with_tax = serializers.SerializerMethodField() 
     images = ProductImageSerializer(many=True,read_only=True)
-    featured_product = serializers.SerializerMethodField(read_only=True)
+    featured_product = serializers.BooleanField(
+    source="is_featured",
+    read_only=True
+    )
 
     class Meta:
         model = Product 
@@ -43,8 +46,6 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_price_with_tax(self,product):
         return (product.unit_price * Decimal("1.1")).quantize(Decimal("0.01"),rounding=ROUND_HALF_UP)
     
-    def get_featured_product(self,product):
-        return Collection.objects.filter(featured_product_id=product.id).exists()
 
 
 # REVIEW SERIALIZER

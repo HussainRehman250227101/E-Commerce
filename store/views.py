@@ -1,13 +1,13 @@
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.decorators import action
-
-from rest_framework.viewsets import ModelViewSet
 from django.shortcuts import get_object_or_404
+from django.db.models import Exists, OuterRef
+
+from rest_framework.decorators import action
+from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter,OrderingFilter
 from rest_framework.mixins import CreateModelMixin,RetrieveModelMixin,DestroyModelMixin 
 from rest_framework.viewsets import GenericViewSet
-
 from rest_framework.permissions import IsAdminUser,IsAuthenticated,AllowAny
 from store.permissions import CanViewHistory, IsAdminOrReadOnly   
 
@@ -20,7 +20,7 @@ from .serializers import AdminCustomerSerializer, CartSerializer, CreateOrderSer
 
 # PRODUCT VIEW SET
 class ProductViewSet(ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.annotate(is_featured=Exists(Collection.objects.filter(featured_product_id=OuterRef("pk")))).select_related("collection").prefetch_related("images",'promotions')
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend,SearchFilter,OrderingFilter]
     pagination_class = ProductPagnation
@@ -31,7 +31,7 @@ class ProductViewSet(ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         product =  self.get_object() 
-        if product.orderItems.all().count() > 0 :
+        if product.objects.prefetch_related('orderItems').count() > 0 :
             return Response({"error":"this product cannot be deleted as it has order items associated to it"})
         return super().destroy(request, *args, **kwargs)   
 
