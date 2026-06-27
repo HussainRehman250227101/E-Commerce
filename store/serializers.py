@@ -1,6 +1,4 @@
 from decimal import Decimal,ROUND_HALF_UP
-from operator import truediv
-from typing import Required
 from rest_framework import serializers
 from .models import *
 
