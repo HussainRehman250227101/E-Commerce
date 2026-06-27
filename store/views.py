@@ -30,6 +30,32 @@ class ProductViewSet(ModelViewSet):
     ordering_fields = ['unit_price']
     permission_classes = [IsAdminOrReadOnly]
 
+    def list(self, request, *args, **kwargs):
+        total = time.perf_counter()
+
+        t = time.perf_counter()
+        queryset = self.filter_queryset(self.get_queryset())
+        print("1. filter_queryset:", time.perf_counter() - t)
+
+        t = time.perf_counter()
+        page = self.paginate_queryset(queryset)
+        print("2. paginate_queryset:", time.perf_counter() - t)
+
+        t = time.perf_counter()
+        serializer = self.get_serializer(page, many=True)
+        print("3. serializer init:", time.perf_counter() - t)
+
+        t = time.perf_counter()
+        data = serializer.data
+        print("4. serializer.data:", time.perf_counter() - t)
+
+        t = time.perf_counter()
+        response = self.get_paginated_response(data)
+        print("5. build response:", time.perf_counter() - t)
+
+        print("TOTAL:", time.perf_counter() - total)
+
+        return response
 
     def destroy(self, request, *args, **kwargs):
         product =  self.get_object() 
@@ -37,17 +63,9 @@ class ProductViewSet(ModelViewSet):
             return Response({"error":"this product cannot be deleted as it has order items associated to it"})
         return super().destroy(request, *args, **kwargs)   
 
-class Ping(APIView):
+class Hellow(APIView):
     def get(self, request):
-        start = time.perf_counter()
-
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT 1")
-            cursor.fetchone()
-
-        db = time.perf_counter() - start
-
-        return Response({"db": db})
+        return Response({"hello": "world"})
 
 # COLLECTION VIEW SET
 class CollectionViewSet(ModelViewSet):

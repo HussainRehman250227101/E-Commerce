@@ -3,12 +3,12 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 # from debug_toolbar.toolbar import debug_toolbar_urls
-from store.views import Ping
+from store.views import Hellow
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ping/', Ping.as_view()),
+    path('hellow/', Hellow.as_view()),
     path('playground/', include('playground.urls')),
     path('store/', include('store.urls')),
     path('auth/', include('djoser.urls')),
