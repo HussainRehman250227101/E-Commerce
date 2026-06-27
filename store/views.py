@@ -2,7 +2,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from django.shortcuts import get_object_or_404
 from django.db.models import Exists, OuterRef
 
-from rest_framework.decorators import action
+from rest_framework.decorators import APIView, action
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter,OrderingFilter
@@ -16,7 +16,8 @@ from .pagination import ProductPagnation
 from .filters import ProductFilter
 from .serializers import AdminCustomerSerializer, CartSerializer, CreateOrderSerializer, CustomerSerializer, OrderSerializer, ProductImageSerializer, ProductSerializer,CollectionSerializer,ReviewSerializer,CartItemSerializer, SimpleCartItemSerializer, UpdateOrderSerializer
 
-
+from django.db import connection
+import time
 
 # PRODUCT VIEW SET
 class ProductViewSet(ModelViewSet):
@@ -29,11 +30,24 @@ class ProductViewSet(ModelViewSet):
     ordering_fields = ['unit_price']
     permission_classes = [IsAdminOrReadOnly]
 
+
     def destroy(self, request, *args, **kwargs):
         product =  self.get_object() 
         if product.objects.prefetch_related('orderItems').count() > 0 :
             return Response({"error":"this product cannot be deleted as it has order items associated to it"})
         return super().destroy(request, *args, **kwargs)   
+
+class Ping(APIView):
+    def get(self, request):
+        start = time.perf_counter()
+
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1")
+            cursor.fetchone()
+
+        db = time.perf_counter() - start
+
+        return Response({"db": db})
 
 # COLLECTION VIEW SET
 class CollectionViewSet(ModelViewSet):
