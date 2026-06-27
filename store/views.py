@@ -1,14 +1,14 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from django.shortcuts import get_object_or_404
-from django.db.models import Exists, OuterRef
+from django.db.models import Count, Exists, OuterRef
 
-from rest_framework.decorators import APIView, action
+from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter,OrderingFilter
 from rest_framework.mixins import CreateModelMixin,RetrieveModelMixin,DestroyModelMixin 
 from rest_framework.viewsets import GenericViewSet
-from rest_framework.permissions import IsAdminUser,IsAuthenticated,AllowAny
+from rest_framework.permissions import IsAdminUser,IsAuthenticated
 from store.permissions import CanViewHistory, IsAdminOrReadOnly   
 
 from .models import Cart, Order, Product,Collection, ProductImage,Review,CartItem,Customer
@@ -39,7 +39,8 @@ class ProductViewSet(ModelViewSet):
 
 # COLLECTION VIEW SET
 class CollectionViewSet(ModelViewSet):
-    queryset = Collection.objects.all() 
+    queryset = Collection.objects.annotate(
+    products_count=Count("products")) 
     serializer_class = CollectionSerializer 
     permission_classes = [IsAdminOrReadOnly]
 

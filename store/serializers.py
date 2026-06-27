@@ -10,9 +10,6 @@ class CollectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Collection
         fields = ['id','title','products_count']
-    
-    def get_products_count(self,collection):
-        return collection.products.count()
 
 
 # PRODUCT IMAGE SERIALIZER
