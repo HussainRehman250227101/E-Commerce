@@ -74,7 +74,7 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://www.hussaindev.tech",
     "https://hussaindev.tech",
-    "https://api.hussaindev.tech",
+    "https://apis.hussaindev.tech",
 ]
 
 INTERNAL_IPS = [
