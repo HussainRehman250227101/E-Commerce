@@ -136,14 +136,21 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 #     }
 # }
 
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise RuntimeError(
+        "DATABASE_URL is missing. "
+        "Configure it in Railway Variables."
+    )
+
 DATABASES = {
-    'default': dj_database_url.config(
-            default=os.environ.get('DATABASE_URL'),
-            conn_max_age=600,
-            conn_health_checks=True,
+    "default": dj_database_url.parse(
+        DATABASE_URL,
+        conn_max_age=600,
+        conn_health_checks=True,
     )
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
