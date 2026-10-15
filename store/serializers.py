@@ -4,12 +4,11 @@ from .models import *
 
 # COLLECTION SERIALIZER
 class CollectionSerializer(serializers.ModelSerializer):
+    products_count = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = Collection
         fields = ['id','title','products_count']
-    
-    def get_products_count(self,collection):
-        return collection.products.count()
 
 
 # PRODUCT IMAGE SERIALIZER
