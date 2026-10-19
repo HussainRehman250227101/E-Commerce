@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_filters',
     'core', 
     'store', 
+    'shopping_assistant.apps.ShoppingAssistantConfig',
     'tags',
     'playground',
     'likes',

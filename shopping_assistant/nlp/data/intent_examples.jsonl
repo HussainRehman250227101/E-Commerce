@@ -1,0 +1,60 @@
+{"text":"Show me Samsung phones","intent":"search_products"}
+{"text":"Find an iPhone for me","intent":"search_products"}
+{"text":"I need a phone with a good camera","intent":"search_products"}
+{"text":"Search for Google Pixel devices","intent":"search_products"}
+{"text":"What phones do you have?","intent":"search_products"}
+{"text":"Show available mobile phones","intent":"search_products"}
+{"text":"I am looking for an Android smartphone","intent":"search_products"}
+{"text":"Find me a OnePlus phone","intent":"search_products"}
+{"text":"Display phones with large batteries","intent":"search_products"}
+{"text":"Can you find Xiaomi mobiles?","intent":"search_products"}
+{"text":"Find the cheapest phone","intent":"cheapest_product"}
+{"text":"Show me the lowest priced iPhone","intent":"cheapest_product"}
+{"text":"Which Samsung phone costs the least?","intent":"cheapest_product"}
+{"text":"Give me the most affordable mobile","intent":"cheapest_product"}
+{"text":"I want the cheapest available smartphone","intent":"cheapest_product"}
+{"text":"Sort phones from cheapest to most expensive","intent":"cheapest_product"}
+{"text":"What is your least expensive iPhone?","intent":"cheapest_product"}
+{"text":"Find a budget phone with the lowest price","intent":"cheapest_product"}
+{"text":"Show me the lowest cost Samsung","intent":"cheapest_product"}
+{"text":"Which phone is the least costly?","intent":"cheapest_product"}
+{"text":"Show me the highest rated phones","intent":"top_rated_products"}
+{"text":"Find a top rated iPhone","intent":"top_rated_products"}
+{"text":"Which phones have the best ratings?","intent":"top_rated_products"}
+{"text":"Show highly rated Samsung mobiles","intent":"top_rated_products"}
+{"text":"I want the best reviewed phone","intent":"top_rated_products"}
+{"text":"Sort products by highest rating","intent":"top_rated_products"}
+{"text":"Give me popular phones with great ratings","intent":"top_rated_products"}
+{"text":"Show phones rated four stars or higher","intent":"top_rated_products"}
+{"text":"What is the best rated iPhone?","intent":"top_rated_products"}
+{"text":"Find a phone with excellent customer reviews","intent":"top_rated_products"}
+{"text":"Find a phone under 500","intent":"budget_search"}
+{"text":"Show me iPhones below Rs 5000","intent":"budget_search"}
+{"text":"I need a mobile for less than 300","intent":"budget_search"}
+{"text":"Find Samsung phones within my budget of 800","intent":"budget_search"}
+{"text":"Show phones priced between 200 and 500","intent":"budget_search"}
+{"text":"What phones can I buy for up to 1000?","intent":"budget_search"}
+{"text":"My maximum budget is 600 for a phone","intent":"budget_search"}
+{"text":"Find a smartphone above 300","intent":"budget_search"}
+{"text":"Can you show phones below 2500 rupees?","intent":"budget_search"}
+{"text":"I want a phone in the 400 to 700 price range","intent":"budget_search"}
+{"text":"Compare these phones by price and rating","intent":"compare_products"}
+{"text":"Compare iPhone and Samsung phones","intent":"compare_products"}
+{"text":"Which is better, Pixel or iPhone?","intent":"compare_products"}
+{"text":"Show a comparison of the cheapest two phones","intent":"compare_products"}
+{"text":"Compare the top rated Samsung devices","intent":"compare_products"}
+{"text":"Help me compare these mobile options","intent":"compare_products"}
+{"text":"What are the differences between iPhone models?","intent":"compare_products"}
+{"text":"Compare phones under 500","intent":"compare_products"}
+{"text":"Compare OnePlus and Xiaomi phones","intent":"compare_products"}
+{"text":"Give me two phones to compare","intent":"compare_products"}
+{"text":"Which one is better?","intent":"clarify"}
+{"text":"Can you explain that?","intent":"clarify"}
+{"text":"What do you mean by that product?","intent":"clarify"}
+{"text":"I am not sure which one to choose","intent":"clarify"}
+{"text":"Can you help me decide?","intent":"clarify"}
+{"text":"Tell me more about it","intent":"clarify"}
+{"text":"What would you recommend for me?","intent":"clarify"}
+{"text":"I need help choosing, but I have no preferences","intent":"clarify"}
+{"text":"Could you narrow down the options?","intent":"clarify"}
+{"text":"Which is the right one for me?","intent":"clarify"}
