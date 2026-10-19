@@ -8,6 +8,56 @@
 {"text":"Find me a OnePlus phone","intent":"search_products"}
 {"text":"Display phones with large batteries","intent":"search_products"}
 {"text":"Can you find Xiaomi mobiles?","intent":"search_products"}
+{"text":"Can you show me the phones available in the store?","intent":"search_products"}
+{"text":"I'm browsing for a new mobile to use every day.","intent":"search_products"}
+{"text":"List the smartphones currently in your catalog.","intent":"search_products"}
+{"text":"Show me Android devices that I can buy.","intent":"search_products"}
+{"text":"I'm looking for a handset for calls, messages, and browsing.","intent":"search_products"}
+{"text":"Do you sell phones with a good camera?","intent":"search_products"}
+{"text":"Help me find a mobile with a long-lasting battery.","intent":"search_products"}
+{"text":"I'd like to browse phones with a large screen.","intent":"search_products"}
+{"text":"Show me compact phones that are easy to carry.","intent":"search_products"}
+{"text":"Find a device with enough storage for photos and apps.","intent":"search_products"}
+{"text":"Do you have any phones with fast charging?","intent":"search_products"}
+{"text":"Show models with a clear and bright display.","intent":"search_products"}
+{"text":"I'm shopping for a replacement smartphone.","intent":"search_products"}
+{"text":"Can I see your range of mobile devices?","intent":"search_products"}
+{"text":"Show me phones that support dual SIM.","intent":"search_products"}
+{"text":"Find a phone that's suitable for work and study.","intent":"search_products"}
+{"text":"I want to see the available Samsung models.","intent":"search_products"}
+{"text":"Show me Google Pixel devices in the catalog.","intent":"search_products"}
+{"text":"Do you have any OnePlus phones?","intent":"search_products"}
+{"text":"I'm interested in Xiaomi Redmi mobiles.","intent":"search_products"}
+{"text":"Can you list the Apple phones you carry?","intent":"search_products"}
+{"text":"Browse the Oppo and Vivo phones for me.","intent":"search_products"}
+{"text":"Show me Infinix and Tecno mobile options.","intent":"search_products"}
+{"text":"Find smartphones with a good balance of everyday features.","intent":"search_products"}
+{"text":"Which mobile models are in your current range?","intent":"search_products"}
+{"text":"Show me a phone with a high-resolution screen.","intent":"search_products"}
+{"text":"Can I browse phones with 128 GB of storage?","intent":"search_products"}
+{"text":"I'm after a simple, reliable smartphone.","intent":"search_products"}
+{"text":"Help me explore the mobile phone collection.","intent":"search_products"}
+{"text":"Display the phone models that are available to order.","intent":"search_products"}
+{"text":"Show me Samsung phones.","intent":"search_products"}
+{"text":"I'm looking for Samsung smartphones.","intent":"search_products"}
+{"text":"Do you have Samsung mobiles?","intent":"search_products"}
+{"text":"Show me Apple phones.","intent":"search_products"}
+{"text":"I'm looking for Apple smartphones.","intent":"search_products"}
+{"text":"Do you have Apple mobiles?","intent":"search_products"}
+{"text":"Show me Google Pixel phones.","intent":"search_products"}
+{"text":"I'm looking for Google Pixel smartphones.","intent":"search_products"}
+{"text":"Do you have Google Pixel mobiles?","intent":"search_products"}
+{"text":"Show me Xiaomi phones.","intent":"search_products"}
+{"text":"I'm looking for Xiaomi smartphones.","intent":"search_products"}
+{"text":"Do you have Xiaomi mobiles?","intent":"search_products"}
+{"text":"Show me OnePlus phones.","intent":"search_products"}
+{"text":"I'm looking for OnePlus smartphones.","intent":"search_products"}
+{"text":"Do you have OnePlus mobiles?","intent":"search_products"}
+{"text":"Show me Oppo phones.","intent":"search_products"}
+{"text":"I'm looking for Oppo smartphones.","intent":"search_products"}
+{"text":"Do you have Oppo mobiles?","intent":"search_products"}
+{"text":"Show me Vivo phones.","intent":"search_products"}
+{"text":"I'm looking for Vivo smartphones.","intent":"search_products"}
 {"text":"Find the cheapest phone","intent":"cheapest_product"}
 {"text":"Show me the lowest priced iPhone","intent":"cheapest_product"}
 {"text":"Which Samsung phone costs the least?","intent":"cheapest_product"}
@@ -18,6 +68,56 @@
 {"text":"Find a budget phone with the lowest price","intent":"cheapest_product"}
 {"text":"Show me the lowest cost Samsung","intent":"cheapest_product"}
 {"text":"Which phone is the least costly?","intent":"cheapest_product"}
+{"text":"Which phone has the lowest listed price?","intent":"cheapest_product"}
+{"text":"Show me the most affordable mobile in stock.","intent":"cheapest_product"}
+{"text":"I just want the cheapest handset you have.","intent":"cheapest_product"}
+{"text":"List phones from the lowest price upwards.","intent":"cheapest_product"}
+{"text":"What's the least expensive smartphone in your catalog?","intent":"cheapest_product"}
+{"text":"Find the phone that costs less than the rest.","intent":"cheapest_product"}
+{"text":"Show the lowest-cost option first, please.","intent":"cheapest_product"}
+{"text":"Which mobile is the cheapest to buy?","intent":"cheapest_product"}
+{"text":"Can you identify your most economical phone?","intent":"cheapest_product"}
+{"text":"Find me the lowest-priced device available.","intent":"cheapest_product"}
+{"text":"I don't need premium features; show the cheapest model.","intent":"cheapest_product"}
+{"text":"What is the absolute cheapest phone you sell?","intent":"cheapest_product"}
+{"text":"Sort the catalog from cheapest phone to priciest.","intent":"cheapest_product"}
+{"text":"Show me the lowest price Samsung phone.","intent":"cheapest_product"}
+{"text":"Which Apple phone is the least expensive?","intent":"cheapest_product"}
+{"text":"Find the cheapest Google Pixel in the store.","intent":"cheapest_product"}
+{"text":"What's your cheapest Xiaomi mobile?","intent":"cheapest_product"}
+{"text":"Show me the lowest-cost OnePlus model.","intent":"cheapest_product"}
+{"text":"Find the least expensive Oppo phone.","intent":"cheapest_product"}
+{"text":"Which Vivo handset costs the least?","intent":"cheapest_product"}
+{"text":"Pick the phone with the smallest price tag.","intent":"cheapest_product"}
+{"text":"Show the lowest-priced phone that's currently available.","intent":"cheapest_product"}
+{"text":"Which handset can I get for the least money?","intent":"cheapest_product"}
+{"text":"I want the lowest cost, not the newest model.","intent":"cheapest_product"}
+{"text":"Find the phone with the minimum price.","intent":"cheapest_product"}
+{"text":"Rank the available mobiles by price, ascending.","intent":"cheapest_product"}
+{"text":"What's the cheapest option I could order today?","intent":"cheapest_product"}
+{"text":"Please put the most affordable mobile first.","intent":"cheapest_product"}
+{"text":"Show me the cheapest phone model in your inventory.","intent":"cheapest_product"}
+{"text":"Which one is priced lower than all the other phones?","intent":"cheapest_product"}
+{"text":"Find the cheapest Samsung phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Samsung mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Apple phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Apple mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Google Pixel phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Google Pixel mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Xiaomi phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Xiaomi mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest OnePlus phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive OnePlus mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Oppo phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Oppo mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Vivo phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Vivo mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Huawei phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Huawei mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Infinix phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Infinix mobile?","intent":"cheapest_product"}
+{"text":"Find the cheapest Tecno phone.","intent":"cheapest_product"}
+{"text":"What's the least expensive Tecno mobile?","intent":"cheapest_product"}
 {"text":"Show me the highest rated phones","intent":"top_rated_products"}
 {"text":"Find a top rated iPhone","intent":"top_rated_products"}
 {"text":"Which phones have the best ratings?","intent":"top_rated_products"}
@@ -28,6 +128,56 @@
 {"text":"Show phones rated four stars or higher","intent":"top_rated_products"}
 {"text":"What is the best rated iPhone?","intent":"top_rated_products"}
 {"text":"Find a phone with excellent customer reviews","intent":"top_rated_products"}
+{"text":"Which phone has the highest customer rating?","intent":"top_rated_products"}
+{"text":"Show me smartphones with the best review scores.","intent":"top_rated_products"}
+{"text":"List the best-rated mobiles first.","intent":"top_rated_products"}
+{"text":"Which phone gets the most positive ratings?","intent":"top_rated_products"}
+{"text":"Find phones with excellent user reviews.","intent":"top_rated_products"}
+{"text":"Show mobile phones with a rating of at least four stars.","intent":"top_rated_products"}
+{"text":"Which handset has the strongest average rating?","intent":"top_rated_products"}
+{"text":"I want to start with the highest-rated phones.","intent":"top_rated_products"}
+{"text":"Sort the phone catalog by rating, best first.","intent":"top_rated_products"}
+{"text":"Find the top-rated smartphone currently available.","intent":"top_rated_products"}
+{"text":"Show me highly rated Apple phones.","intent":"top_rated_products"}
+{"text":"Which Samsung phone has the best rating?","intent":"top_rated_products"}
+{"text":"Find the best-reviewed Google Pixel.","intent":"top_rated_products"}
+{"text":"Show top-rated Xiaomi phones.","intent":"top_rated_products"}
+{"text":"Which OnePlus model has the strongest reviews?","intent":"top_rated_products"}
+{"text":"Find highly rated Oppo and Vivo phones.","intent":"top_rated_products"}
+{"text":"Display phones rated 4.5 stars or above.","intent":"top_rated_products"}
+{"text":"Show models with a rating close to five stars.","intent":"top_rated_products"}
+{"text":"Which mobile do customers rate most highly?","intent":"top_rated_products"}
+{"text":"List phones with great customer feedback.","intent":"top_rated_products"}
+{"text":"I'd rather choose based on ratings; show me the best ones.","intent":"top_rated_products"}
+{"text":"Show the highest-rated handset in stock.","intent":"top_rated_products"}
+{"text":"Find a phone with consistently strong reviews.","intent":"top_rated_products"}
+{"text":"Which model has the best star score?","intent":"top_rated_products"}
+{"text":"Please put the best-reviewed mobile at the top.","intent":"top_rated_products"}
+{"text":"Show me the phones with the strongest ratings overall.","intent":"top_rated_products"}
+{"text":"Find popular phones with excellent ratings.","intent":"top_rated_products"}
+{"text":"Can you sort these mobiles by customer score?","intent":"top_rated_products"}
+{"text":"Show phones with a rating above 4.2 stars.","intent":"top_rated_products"}
+{"text":"Find me the top rated phone in the collection.","intent":"top_rated_products"}
+{"text":"Show the top-rated Samsung phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Samsung mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Apple phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Apple mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Google Pixel phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Google Pixel mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Xiaomi phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Xiaomi mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated OnePlus phone.","intent":"top_rated_products"}
+{"text":"Find highly rated OnePlus mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Oppo phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Oppo mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Vivo phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Vivo mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Huawei phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Huawei mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Infinix phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Infinix mobiles.","intent":"top_rated_products"}
+{"text":"Show the top-rated Tecno phone.","intent":"top_rated_products"}
+{"text":"Find highly rated Tecno mobiles.","intent":"top_rated_products"}
 {"text":"Find a phone under 500","intent":"budget_search"}
 {"text":"Show me iPhones below Rs 5000","intent":"budget_search"}
 {"text":"I need a mobile for less than 300","intent":"budget_search"}
@@ -38,6 +188,56 @@
 {"text":"Find a smartphone above 300","intent":"budget_search"}
 {"text":"Can you show phones below 2500 rupees?","intent":"budget_search"}
 {"text":"I want a phone in the 400 to 700 price range","intent":"budget_search"}
+{"text":"Show me phones costing less than Rs 5,000.","intent":"budget_search"}
+{"text":"Find a smartphone within a budget of 750.","intent":"budget_search"}
+{"text":"I can spend up to Rs 7,500 on a phone.","intent":"budget_search"}
+{"text":"List mobile phones below 1,000.","intent":"budget_search"}
+{"text":"Show options between Rs 500 and Rs 2,500.","intent":"budget_search"}
+{"text":"My maximum phone budget is 900.","intent":"budget_search"}
+{"text":"Find a handset priced under 700.","intent":"budget_search"}
+{"text":"Only show mobiles with a price below 5,000.","intent":"budget_search"}
+{"text":"Can you find a phone for less than Rs 3,000?","intent":"budget_search"}
+{"text":"Keep the results within my budget of 1,500.","intent":"budget_search"}
+{"text":"Show me phones that cost no more than 800.","intent":"budget_search"}
+{"text":"Find smartphones in the 300 to 1,000 range.","intent":"budget_search"}
+{"text":"I don't want to spend more than Rs 5,000.","intent":"budget_search"}
+{"text":"Display phones available for a maximum of 2,500.","intent":"budget_search"}
+{"text":"Please filter the phone list to under 900.","intent":"budget_search"}
+{"text":"Show phones that cost between 750 and 5,000.","intent":"budget_search"}
+{"text":"Are there any mobiles for 500 or less?","intent":"budget_search"}
+{"text":"My price limit is Rs 7,000; find suitable phones.","intent":"budget_search"}
+{"text":"Find a mobile around the 1,000 mark.","intent":"budget_search"}
+{"text":"Show handsets in my price range of 300 to 750.","intent":"budget_search"}
+{"text":"Find a phone with a listed price below 600.","intent":"budget_search"}
+{"text":"Only display options under Rs 9,000.","intent":"budget_search"}
+{"text":"I have 2,500 to spend; show me phones in that range.","intent":"budget_search"}
+{"text":"Can you search for mobiles up to Rs 5,000?","intent":"budget_search"}
+{"text":"Show phones whose price is above 500.","intent":"budget_search"}
+{"text":"Find a smartphone between 1,000 and 5,000.","intent":"budget_search"}
+{"text":"Keep the maximum price at 750.","intent":"budget_search"}
+{"text":"Show me anything priced lower than 3,000.","intent":"budget_search"}
+{"text":"Filter the phones using a 900 price cap.","intent":"budget_search"}
+{"text":"Can I see mobiles that fit a 700 budget?","intent":"budget_search"}
+{"text":"Find Samsung phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Samsung mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Apple phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Apple mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Google Pixel phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Google Pixel mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Xiaomi phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Xiaomi mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find OnePlus phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show OnePlus mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Oppo phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Oppo mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Vivo phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Vivo mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Huawei phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Huawei mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Infinix phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Infinix mobiles below 1,000.","intent":"budget_search"}
+{"text":"Find Tecno phones under Rs 5,000.","intent":"budget_search"}
+{"text":"Show Tecno mobiles below 1,000.","intent":"budget_search"}
 {"text":"Compare these phones by price and rating","intent":"compare_products"}
 {"text":"Compare iPhone and Samsung phones","intent":"compare_products"}
 {"text":"Which is better, Pixel or iPhone?","intent":"compare_products"}
@@ -48,6 +248,56 @@
 {"text":"Compare phones under 500","intent":"compare_products"}
 {"text":"Compare OnePlus and Xiaomi phones","intent":"compare_products"}
 {"text":"Give me two phones to compare","intent":"compare_products"}
+{"text":"Compare the available phones by price and rating.","intent":"compare_products"}
+{"text":"Which is better, Samsung Galaxy or Google Pixel?","intent":"compare_products"}
+{"text":"Put iPhone and Samsung side by side.","intent":"compare_products"}
+{"text":"Show me the differences between these two mobile models.","intent":"compare_products"}
+{"text":"I can't choose between OnePlus and Xiaomi; compare them.","intent":"compare_products"}
+{"text":"Compare the cheapest two phones in the catalog.","intent":"compare_products"}
+{"text":"Which phone is better value for money?","intent":"compare_products"}
+{"text":"Can you compare Apple and Google phones?","intent":"compare_products"}
+{"text":"Compare the ratings for these mobile options.","intent":"compare_products"}
+{"text":"Show me a side-by-side comparison of two smartphones.","intent":"compare_products"}
+{"text":"How does a Samsung phone compare with an iPhone?","intent":"compare_products"}
+{"text":"Compare Oppo with Vivo for me.","intent":"compare_products"}
+{"text":"Can you compare the prices of these handsets?","intent":"compare_products"}
+{"text":"Which is better, Xiaomi Redmi or Samsung Galaxy?","intent":"compare_products"}
+{"text":"Compare the top-rated phones currently in stock.","intent":"compare_products"}
+{"text":"Show the pros and cons of these two devices.","intent":"compare_products"}
+{"text":"I'd like to compare two phones before choosing.","intent":"compare_products"}
+{"text":"Compare OnePlus and Samsung phones by price.","intent":"compare_products"}
+{"text":"Which model has a better rating between these two?","intent":"compare_products"}
+{"text":"Can I see a comparison of the Pixel and iPhone?","intent":"compare_products"}
+{"text":"Compare these phones based on price, rating, and stock.","intent":"compare_products"}
+{"text":"What's different between the two phone models?","intent":"compare_products"}
+{"text":"Help me weigh up these mobile options.","intent":"compare_products"}
+{"text":"Compare Samsung with Xiaomi Redmi.","intent":"compare_products"}
+{"text":"Show me how these two products stack up.","intent":"compare_products"}
+{"text":"Compare the lowest-priced phone and the highest-rated one.","intent":"compare_products"}
+{"text":"Which of these two handsets is the better choice?","intent":"compare_products"}
+{"text":"Can you make a side-by-side comparison of the options?","intent":"compare_products"}
+{"text":"Compare the prices and ratings of iPhone models.","intent":"compare_products"}
+{"text":"Help me compare the phone choices in my results.","intent":"compare_products"}
+{"text":"Compare iPhone and Samsung Galaxy.","intent":"compare_products"}
+{"text":"Which is better, iPhone or Samsung Galaxy?","intent":"compare_products"}
+{"text":"Compare Google Pixel and iPhone.","intent":"compare_products"}
+{"text":"Which is better, Google Pixel or iPhone?","intent":"compare_products"}
+{"text":"Compare OnePlus and Xiaomi.","intent":"compare_products"}
+{"text":"Which is better, OnePlus or Xiaomi?","intent":"compare_products"}
+{"text":"Compare Samsung and Google Pixel.","intent":"compare_products"}
+{"text":"Which is better, Samsung or Google Pixel?","intent":"compare_products"}
+{"text":"Compare Oppo and Vivo.","intent":"compare_products"}
+{"text":"Which is better, Oppo or Vivo?","intent":"compare_products"}
+{"text":"Compare Infinix and Tecno.","intent":"compare_products"}
+{"text":"Which is better, Infinix or Tecno?","intent":"compare_products"}
+{"text":"Compare iPhone and OnePlus.","intent":"compare_products"}
+{"text":"Which is better, iPhone or OnePlus?","intent":"compare_products"}
+{"text":"Compare Samsung Galaxy and Xiaomi Redmi.","intent":"compare_products"}
+{"text":"Which is better, Samsung Galaxy or Xiaomi Redmi?","intent":"compare_products"}
+{"text":"Compare Huawei and Samsung.","intent":"compare_products"}
+{"text":"Which is better, Huawei or Samsung?","intent":"compare_products"}
+{"text":"Compare Pixel and OnePlus.","intent":"compare_products"}
+{"text":"Which is better, Pixel or OnePlus?","intent":"compare_products"}
 {"text":"Which one is better?","intent":"clarify"}
 {"text":"Can you explain that?","intent":"clarify"}
 {"text":"What do you mean by that product?","intent":"clarify"}
@@ -58,3 +308,53 @@
 {"text":"I need help choosing, but I have no preferences","intent":"clarify"}
 {"text":"Could you narrow down the options?","intent":"clarify"}
 {"text":"Which is the right one for me?","intent":"clarify"}
+{"text":"Can you explain your last answer a little more?","intent":"clarify"}
+{"text":"I'm not sure which of those options to choose.","intent":"clarify"}
+{"text":"Could you clarify what you meant by that?","intent":"clarify"}
+{"text":"Tell me more about the phone you mentioned.","intent":"clarify"}
+{"text":"Which one would suit my needs best?","intent":"clarify"}
+{"text":"Can you help me make a decision?","intent":"clarify"}
+{"text":"Why did you recommend that option?","intent":"clarify"}
+{"text":"I don't quite understand those results.","intent":"clarify"}
+{"text":"Can you explain that in simpler words?","intent":"clarify"}
+{"text":"What should I choose from this list?","intent":"clarify"}
+{"text":"Could you narrow the selection for me?","intent":"clarify"}
+{"text":"Can you repeat the options you showed?","intent":"clarify"}
+{"text":"Why is that product a good choice?","intent":"clarify"}
+{"text":"I'm confused about the recommendation.","intent":"clarify"}
+{"text":"Could you give me more details about that model?","intent":"clarify"}
+{"text":"Which of those would you personally suggest?","intent":"clarify"}
+{"text":"Can you explain what makes it suitable?","intent":"clarify"}
+{"text":"How should I decide between these options?","intent":"clarify"}
+{"text":"What do you mean by the top result?","intent":"clarify"}
+{"text":"I need a little more help choosing.","intent":"clarify"}
+{"text":"Can you tell me why that one was picked?","intent":"clarify"}
+{"text":"Could you make your recommendation clearer?","intent":"clarify"}
+{"text":"I'm not sure I follow; can you explain?","intent":"clarify"}
+{"text":"What's the reason for that suggestion?","intent":"clarify"}
+{"text":"Can you help me understand the result?","intent":"clarify"}
+{"text":"Which option makes the most sense for me?","intent":"clarify"}
+{"text":"Please explain the difference you just mentioned.","intent":"clarify"}
+{"text":"Can you give me a bit more context?","intent":"clarify"}
+{"text":"I still can't decide which one to get.","intent":"clarify"}
+{"text":"Could you explain the suggestion in more detail?","intent":"clarify"}
+{"text":"Can you tell me more about the first option?","intent":"clarify"}
+{"text":"Why did you choose the first option?","intent":"clarify"}
+{"text":"Can you tell me more about the second phone?","intent":"clarify"}
+{"text":"Why did you choose the second phone?","intent":"clarify"}
+{"text":"Can you tell me more about that model?","intent":"clarify"}
+{"text":"Why did you choose that model?","intent":"clarify"}
+{"text":"Can you tell me more about the suggested product?","intent":"clarify"}
+{"text":"Why did you choose the suggested product?","intent":"clarify"}
+{"text":"Can you tell me more about those results?","intent":"clarify"}
+{"text":"Why did you choose those results?","intent":"clarify"}
+{"text":"Can you tell me more about the cheaper one?","intent":"clarify"}
+{"text":"Why did you choose the cheaper one?","intent":"clarify"}
+{"text":"Can you tell me more about the recommended phone?","intent":"clarify"}
+{"text":"Why did you choose the recommended phone?","intent":"clarify"}
+{"text":"Can you tell me more about the last result?","intent":"clarify"}
+{"text":"Why did you choose the last result?","intent":"clarify"}
+{"text":"Can you tell me more about the top option?","intent":"clarify"}
+{"text":"Why did you choose the top option?","intent":"clarify"}
+{"text":"Can you tell me more about the other model?","intent":"clarify"}
+{"text":"Why did you choose the other model?","intent":"clarify"}
