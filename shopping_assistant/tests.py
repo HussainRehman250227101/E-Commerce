@@ -19,3 +19,13 @@ class ShoppingAssistantSlotTests(SimpleTestCase):
     def test_limits_result_count(self):
         slots = extract_slots("Show me 20 Samsung phones")
         self.assertEqual(slots["result_limit"], 10)
+
+    def test_apple_watch_is_parsed_as_watch_not_phone(self):
+        slots = extract_slots("I want an Apple Watch")
+        self.assertEqual(slots["brand"], "Apple")
+        self.assertEqual(slots["product_type"], "watch")
+        self.assertIsNone(slots["model_keyword"])
+
+    def test_iphone_is_still_parsed_as_phone(self):
+        slots = extract_slots("Show me an iPhone")
+        self.assertEqual(slots["product_type"], "phone")
