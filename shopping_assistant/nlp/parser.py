@@ -117,8 +117,22 @@ def extract_slots(text):
             slots["brand"] = brand.title() if brand != "xiaomi" else "Xiaomi"
             break
 
-    if re.search(r"\b(phone|phones|mobile|mobiles|smartphone|smartphones|iphone|galaxy|pixel|redmi|oneplus)\b", lower):
-        slots["product_type"] = "phone"
+    # Detect specific product categories before the broad phone category.
+    # Category filters prevent "Apple Watch" from matching an iPhone just
+    # because both products share the Apple brand.
+    product_categories = (
+        ("watch", r"\b(apple\s+watch|smartwatch|smartwatches|watches|watch)\b"),
+        ("tablet", r"\b(tablet|tablets|ipad|ipads)\b"),
+        ("laptop", r"\b(laptop|laptops|notebook|notebooks)\b"),
+        ("headphones", r"\b(headphones|headphone|earbuds|earphones|airpods)\b"),
+        ("charger", r"\b(charger|chargers|charging adapter|power adapter)\b"),
+        ("case", r"\b(phone case|mobile case|phone cover|mobile cover)\b"),
+        ("phone", r"\b(phone|phones|mobile|mobiles|smartphone|smartphones|iphone|galaxy|pixel|redmi|oneplus)\b"),
+    )
+    for category, pattern in product_categories:
+        if re.search(pattern, lower, re.I):
+            slots["product_type"] = category
+            break
 
     range_match = PRICE_RANGE.search(text)
     if range_match:
